@@ -72,7 +72,7 @@ class Client
         $this->api_client = new \GoCardlessPro\Core\ApiClient($http_client, $config);
     }
 
-    
+
     /**
      * Service for interacting with bank details lookups
      *
@@ -86,7 +86,7 @@ class Client
 
         return $this->bank_details_lookups;
     }
-    
+
     /**
      * Service for interacting with creditors
      *
@@ -100,7 +100,7 @@ class Client
 
         return $this->creditors;
     }
-    
+
     /**
      * Service for interacting with creditor bank accounts
      *
@@ -114,7 +114,7 @@ class Client
 
         return $this->creditor_bank_accounts;
     }
-    
+
     /**
      * Service for interacting with currency exchange rates
      *
@@ -128,7 +128,7 @@ class Client
 
         return $this->currency_exchange_rates;
     }
-    
+
     /**
      * Service for interacting with customers
      *
@@ -142,7 +142,7 @@ class Client
 
         return $this->customers;
     }
-    
+
     /**
      * Service for interacting with customer bank accounts
      *
@@ -156,7 +156,7 @@ class Client
 
         return $this->customer_bank_accounts;
     }
-    
+
     /**
      * Service for interacting with customer notifications
      *
@@ -170,7 +170,7 @@ class Client
 
         return $this->customer_notifications;
     }
-    
+
     /**
      * Service for interacting with events
      *
@@ -184,7 +184,7 @@ class Client
 
         return $this->events;
     }
-    
+
     /**
      * Service for interacting with instalment schedule
      *
@@ -198,7 +198,7 @@ class Client
 
         return $this->instalment_schedules;
     }
-    
+
     /**
      * Service for interacting with mandates
      *
@@ -212,7 +212,7 @@ class Client
 
         return $this->mandates;
     }
-    
+
     /**
      * Service for interacting with mandate imports
      *
@@ -226,7 +226,7 @@ class Client
 
         return $this->mandate_imports;
     }
-    
+
     /**
      * Service for interacting with mandate import entries
      *
@@ -240,7 +240,7 @@ class Client
 
         return $this->mandate_import_entries;
     }
-    
+
     /**
      * Service for interacting with mandate pdfs
      *
@@ -254,7 +254,7 @@ class Client
 
         return $this->mandate_pdfs;
     }
-    
+
     /**
      * Service for interacting with payments
      *
@@ -268,7 +268,7 @@ class Client
 
         return $this->payments;
     }
-    
+
     /**
      * Service for interacting with payouts
      *
@@ -282,7 +282,7 @@ class Client
 
         return $this->payouts;
     }
-    
+
     /**
      * Service for interacting with payout items
      *
@@ -296,7 +296,7 @@ class Client
 
         return $this->payout_items;
     }
-    
+
     /**
      * Service for interacting with redirect flows
      *
@@ -310,7 +310,7 @@ class Client
 
         return $this->redirect_flows;
     }
-    
+
     /**
      * Service for interacting with refunds
      *
@@ -324,7 +324,7 @@ class Client
 
         return $this->refunds;
     }
-    
+
     /**
      * Service for interacting with subscriptions
      *
@@ -338,7 +338,7 @@ class Client
 
         return $this->subscriptions;
     }
-    
+
     /**
      * Service for interacting with tax rates
      *
@@ -352,7 +352,7 @@ class Client
 
         return $this->tax_rates;
     }
-    
+
     private function getUrlForEnvironment($environment)
     {
         $environment_urls = array(
@@ -402,9 +402,9 @@ class Client
     {
         $curlinfo = curl_version();
         $uagent = array();
-        $uagent[] = 'gocardless-pro-php/4.5.0';
+        $uagent[] = 'gocardless-pro-php/5.0.0';
         $uagent[] = 'schema-version/2015-07-06';
-        $uagent[] = 'GuzzleHttp/' . \GuzzleHttp\Client::VERSION;
+        $uagent[] = 'GuzzleHttp/' . \GuzzleHttp\Client::MAJOR_VERSION;
         $uagent[] = 'php/' . phpversion();
         if (extension_loaded('curl') && function_exists('curl_version')) {
             $uagent[] = 'curl/' . \curl_version()['version'];
